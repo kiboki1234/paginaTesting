@@ -1,12 +1,8 @@
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
+/* General Styles */
 body {
-    display: flex;
-    flex-direction: column;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -20,50 +16,52 @@ header {
 }
 
 main {
-    flex: 1; /* Allows main to grow and push footer down */
     padding: 2em;
-}
-
-.plan-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5em;
+    align-items: center;
+    min-height: 60vh;
 }
 
-.plan {
+.form-container {
     background-color: white;
-    padding: 1.5em;
+    padding: 2em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(100% - 1.5em);
-    max-width: 300px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.plan:hover {
-    transform: translateY(-10px);
-}
-
-.bandwidth {
-    font-size: 1.5em;
-    margin-top: 0;
-    color: #4CAF50;
-}
-
-.plan-image {
     width: 100%;
-    height: auto;
-    margin: 1em 0;
-    border-radius: 8px;
+    max-width: 600px;
 }
 
-.description {
-    font-size: 1.2em;
-    margin-bottom: 1em;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
-.quote-button {
+label {
+    font-weight: 700;
+    color: #333;
+}
+
+input, textarea {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -71,11 +69,10 @@ main {
     font-size: 1em;
     cursor: pointer;
     border-radius: 4px;
-    text-decoration: none;
     transition: background-color 0.3s ease-in-out;
 }
 
-.quote-button:hover {
+button:hover {
     background-color: #45a049;
 }
 
@@ -89,14 +86,12 @@ footer {
 
 /* Media Queries for Responsiveness */
 
-@media (min-width: 768px) {
-    .plan {
-        flex: 1 1 calc(50% - 1.5em);
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1.5em;
     }
-}
 
-@media (min-width: 1024px) {
-    .plan {
-        flex: 1 1 calc(33% - 1.5em);
+    input, textarea {
+        font-size: 0.9em;
     }
 }
