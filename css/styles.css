@@ -18,13 +18,21 @@ main {
     padding: 2em;
 }
 
+.plan-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows cards to wrap onto the next line on smaller screens */
+    gap: 1.5em; /* Space between cards */
+}
+
 .plan {
     background-color: white;
-    margin: 1em 0;
     padding: 1.5em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 1.5em); /* Adjust the width of each card */
     transition: transform 0.3s ease-in-out;
+    max-width: 300px; /* Limit the width of each card */
 }
 
 .plan:hover {
