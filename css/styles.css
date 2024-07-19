@@ -1,15 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 1em 0;
+    padding: 1.5em 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -19,34 +21,44 @@ main {
 .plan {
     background-color: white;
     margin: 1em 0;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
 }
 
 .bandwidth {
     font-size: 1.5em;
     margin-top: 0;
+    color: #4CAF50;
 }
 
 .plan-image {
     width: 100%;
     height: auto;
     margin: 1em 0;
+    border-radius: 8px;
 }
 
 .description {
     font-size: 1.2em;
+    margin-bottom: 1em;
 }
 
 .quote-button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 0.5em 1em;
+    padding: 0.75em 1.5em;
     font-size: 1em;
     cursor: pointer;
     border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .quote-button:hover {
@@ -57,8 +69,48 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 1.5em 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
 }
