@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planes de Internet - IMPACTONET</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Página Principal - IMPACTONET</title>
+    <link rel="stylesheet" href="css/stylePrincipal.css">
 </head>
 <body>
     <header>
-        <h1>Planes de Internet - IMPACTONET</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de Nosotros</a></li>
+                <li><a href="ApartadoDePlanes.html">Planes</a></li>
+                <li><a href="contact.html">Contactos</a></li>
+                <li><a href="#">Regulación</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <div class="plan-container">
-            <section class="plan" id="plan1">
-                <h2 class="bandwidth">Ancho de Banda: 100 Mbps</h2>
-                <img src="images/plan1.jpg" alt="Plan 1" class="plan-image">
-                <p class="description">Este plan ofrece una velocidad de 100 Mbps ideal para streaming y juegos en línea.</p>
-                <a href="contact.html" class="quote-button">Cotizar</a>
-            </section>
-            <section class="plan" id="plan2">
-                <h2 class="bandwidth">Ancho de Banda: 200 Mbps</h2>
-                <img src="images/plan2.jpg" alt="Plan 2" class="plan-image">
-                <p class="description">Este plan ofrece una velocidad de 200 Mbps ideal para múltiples usuarios y dispositivos.</p>
-                <a href="contact.html" class="quote-button">Cotizar</a>
-            </section>
-            <section class="plan" id="plan3">
-                <h2 class="bandwidth">Ancho de Banda: 500 Mbps</h2>
-                <img src="images/plan3.jpg" alt="Plan 3" class="plan-image">
-                <p class="description">Este plan ofrece una velocidad de 500 Mbps ideal para empresas y oficinas.</p>
-                <a href="contact.html" class="quote-button">Cotizar</a>
-            </section>
-        </div>
+        <section class="benefits">
+            <h2>Beneficios</h2>
+            <div class="benefits-grid">
+                <div class="benefit-block">
+                    <img src="icon1.png" alt="Icono 1">
+                    <h3>Título del Beneficio 1</h3>
+                    <p>Descripción del beneficio 1. Explicando su importancia y cómo puede beneficiar al usuario.</p>
+                </div>
+                <div class="benefit-block">
+                    <img src="icon2.png" alt="Icono 2">
+                    <h3>Título del Beneficio 2</h3>
+                    <p>Descripción del beneficio 2. Explicando su importancia y cómo puede beneficiar al usuario.</p>
+                </div>
+                <div class="benefit-block">
+                    <img src="icon3.png" alt="Icono 3">
+                    <h3>Título del Beneficio 3</h3>
+                    <p>Descripción del beneficio 3. Explicando su importancia y cómo puede beneficiar al usuario.</p>
+                </div>
+                <!-- Agrega más bloques de beneficios según sea necesario -->
+            </div>
+        </section>
+
+        <section class="additional-info">
+            <h2>¿Quieres más información?</h2>
+            <a href="contact.html" class="contact-button">Contáctanos</a>
+        </section>
     </main>
-    
+
     <footer>
-        <p>&copy; 2024 IMPACTONET</p>
+        <p>&copy; 2024 IMPACTONET. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
