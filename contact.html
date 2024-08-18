@@ -24,11 +24,34 @@
                 <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
                 
                 <button type="submit" id="submit-button">Enviar</button>
+                <button type="button" id="whatsapp-button" class="whatsapp-button">Enviar por WhatsApp</button>
             </form>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 IMPACTONET</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const whatsappButton = document.getElementById('whatsapp-button');
+
+            whatsappButton.addEventListener('click', function() {
+                // Obtener los valores del formulario
+                const name = encodeURIComponent(form.elements['name'].value);
+                const email = encodeURIComponent(form.elements['email'].value);
+                const message = encodeURIComponent(form.elements['message'].value);
+
+                // Construir el enlace de WhatsApp
+                const phoneNumber = '593958870928'; // Número de WhatsApp
+                const text = `Nombre: ${name}%0AEmail: ${email}%0AMensaje: ${message}`;
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${text}`;
+
+                // Abrir enlace de WhatsApp en una nueva ventana
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    </script>
 </body>
 </html>
